@@ -8,11 +8,11 @@ import { Carousel, Avatar } from "antd";
 const contentStyle = {
   margin: 0,
   color: "#black",
-  background: "#f3f3f3",
+  background: "#f7f2f2",
 };
 
 function Testimonials() {
-  const { active, setActive } = useContext(LandingPageContext);
+  const { setActive } = useContext(LandingPageContext);
   const [isOnScreen, setIsOnScreen] = useState(false);
   const testimonialsRef = useRef();
 

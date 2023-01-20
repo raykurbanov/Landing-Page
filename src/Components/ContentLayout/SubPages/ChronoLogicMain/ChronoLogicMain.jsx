@@ -14,13 +14,14 @@ const contentStyle = {
   justifyContent: "center",
   alignItems: "center",
 
-  lineHeight: "160px",
+  lineHeight: "120px",
   textAlign: "center",
   background: "#02162d",
+  zIndex: 0,
 };
 
 function ChornoLogicMain() {
-  const { active, setActive } = useContext(LandingPageContext);
+  const { setActive } = useContext(LandingPageContext);
   const [isOnScreen, setIsOnScreen] = useState(false);
   const homeRef = useRef();
 

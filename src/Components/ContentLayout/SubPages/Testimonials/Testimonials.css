@@ -11,7 +11,7 @@
 }
 
 .customer-review {
-  height: 45vh;
+  height: 35vh;
   background-color: #f7f2f2;
   width: 100%;
 }
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   width: 50%;
-  height: 100%;
+  height: 90%;
   color: #0f2137;
 }
 
@@ -107,4 +107,21 @@
 
 .brand img {
   width: 75px;
+}
+
+@media (max-width: 980px) {
+  .review-right {
+    display: none;
+  }
+  .review-left {
+    width: 100%;
+  }
+  .content-info {
+    width: 80%;
+  }
+  .customer-review h1 {
+    font-size: 26px;
+    line-height: 2rem;
+    margin-left: 15px;
+  }
 }

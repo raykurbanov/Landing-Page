@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
 import LandingPageContext from "../../context/LandingPageContext";
-
 import { CaretDownOutlined } from "@ant-design/icons";
-import { Menu, Button, Space, Dropdown } from "antd";
+import { Menu, Button, Space, Dropdown, Drawer } from "antd";
 import "./HeaderLayout.css";
 const items = [
   {
@@ -20,7 +19,14 @@ const items = [
 ];
 
 function HeaderLayout() {
-  const { active, setActive } = useContext(LandingPageContext);
+  const { active } = useContext(LandingPageContext);
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
 
   return (
     <section className="container-fluid">
@@ -76,6 +82,56 @@ function HeaderLayout() {
               Register / Log In
             </Button>
           </Space>
+        </div>
+        <div className="drawer">
+          <div className="logo" onClick={showDrawer} />
+          <Drawer
+            title="Basic Drawer"
+            placement="right"
+            onClose={onClose}
+            open={open}
+            className="drawer-component"
+          >
+            <div className="drawer-content">
+              <a
+                href="#chronologic"
+                className={active === "chronologic" && "active"}
+              >
+                Home
+              </a>
+              <a
+                href="#process-mining"
+                className={active === "process-mining" && "active"}
+              >
+                What is Process Mining?
+              </a>
+              <Dropdown
+                menu={{
+                  items,
+                }}
+                trigger={["click"]}
+              >
+                <a onClick={(e) => e.preventDefault()}>
+                  <Space className="nav-link" id="usecases">
+                    Industries and Use Cases
+                    <CaretDownOutlined />
+                  </Space>
+                </a>
+              </Dropdown>
+              <a
+                href="#testimonials"
+                className={active === "testimonials" && "active"}
+              >
+                Testimonials
+              </a>
+              <a href="#FAQ" className={active === "FAQ" && "active"}>
+                FAQ
+              </a>
+              <a href="#contact" className={active === "contact" && "active"}>
+                Contact Us
+              </a>
+            </div>
+          </Drawer>
         </div>
       </div>
     </section>

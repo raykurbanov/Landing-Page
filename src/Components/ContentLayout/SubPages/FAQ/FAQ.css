@@ -31,12 +31,9 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 50px;
-  /* identical to box height, or 208% */
-
   text-align: center;
   letter-spacing: -0.5px;
   margin-bottom: 5px;
-
   color: #0f2137;
 }
 
@@ -123,4 +120,49 @@
 #button-questions span:hover {
   opacity: 1;
   color: #02073e;
+}
+
+@media (max-width: 450px) {
+  .faq-header h2 {
+    padding-right: 0;
+  }
+  .faq-questions {
+    flex-direction: column;
+  }
+  .faq-header h2 {
+    padding-right: 0;
+  }
+  .faq {
+    height: 205vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-header h2 {
+    padding-right: 0;
+  }
+  .faq-questions {
+    flex-direction: column;
+  }
+  .faq-header h2 {
+    padding-right: 0;
+  }
+  .faq {
+    height: 165vh;
+  }
+}
+
+@media (max-width: 960px) {
+  .faq-header h2 {
+    padding-right: 0;
+  }
+  .faq-questions {
+    flex-direction: column;
+  }
+  .faq-header h2 {
+    padding-right: 0;
+  }
+  .faq {
+    height: 140vh;
+  }
 }

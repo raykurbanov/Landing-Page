@@ -94,3 +94,9 @@ input::placeholder {
   margin: 0 auto;
   margin-top: 15px;
 }
+
+@media (max-width: 960px) {
+  .form {
+    width: 80%;
+  }
+}
