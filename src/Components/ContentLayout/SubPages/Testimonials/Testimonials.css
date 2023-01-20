@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap");
+
+.review-faq-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 45vh;
+  justify-content: center;
+  scroll-margin-top: 10vh;
+  background-color: #fff;
+}
+
+.customer-review {
+  height: 45vh;
+  background-color: #f7f2f2;
+  width: 100%;
+}
+
+.customer-review h1 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+  margin-top: 25px;
+  margin-left: 75px;
+  color: #0f2137;
+}
+
+.review-container {
+  display: flex;
+}
+
+.review-left,
+.review-right {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  color: #0f2137;
+}
+
+.review-left {
+  padding-right: 5%;
+  justify-content: flex-end;
+}
+
+.review-right {
+  padding-left: 5%;
+  justify-content: flex-start;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 15%;
+  padding-right: 10px;
+  margin-bottom: 10%;
+}
+
+.content-info {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#client-info {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+}
+
+.avatar-pic {
+  background-image: url("../../../../assets//img/profilePic.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.client h5 {
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+#title-company {
+  margin-top: 0;
+  opacity: 0.75;
+}
+
+.brand img {
+  width: 75px;
+}

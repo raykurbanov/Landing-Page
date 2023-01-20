@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap");
+
+.process-mining-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  scroll-margin-top: 10vh;
+  background-color: #fff;
+}
+
+.description {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: #eeeeee;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.graphics {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: center;
+  scroll-margin-top: 10vh;
+}
+
+.description-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  padding-left: 70px;
+  padding-right: 50px;
+}
+
+.description-left p,
+a {
+  font-size: 16px;
+  line-height: 36px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: #02073e;
+}
+
+.description-left a {
+  color: #5567ff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.description-left h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  color: #0f2137;
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+.description-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  background-image: url("../../../../assets/img/ToolDemoVisuals.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-left: -35px;
+}
+
+.graphics-left {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin-bottom: 20px;
+  background-image: url("../../../../assets/img/illustration.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.graphics-right {
+  text-align: center;
+  width: 50%;
+  /* border: 1px solid red; */
+  text-align: left;
+  padding-right: 150px;
+  margin-left: -80px;
+  margin-top: -45px;
+}
+
+.graphics-right p {
+  color: #02073e;
+  line-height: 36px;
+  padding-right: 120px;
+}
+
+.graphics-right a {
+  color: #5567ff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.graphics-right h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  color: #0f2137;
+  margin-bottom: 15px;
+  margin-top: 8px;
+  line-height: 55px;
+}

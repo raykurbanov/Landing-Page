@@ -1,0 +1,97 @@
+.main-container {
+  box-sizing: border-box;
+  height: 90vh;
+  background-color: #02162d;
+  text-align: center;
+  scroll-margin-top: 10vh;
+}
+
+.header-name {
+  height: 25vh;
+}
+
+.header-name h2 {
+  margin-top: 0;
+  height: 33%;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: -1.375px;
+  margin-bottom: 0;
+}
+
+.header-name p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.8;
+  /* margin-bottom: 2%;
+  margin-top: 0; */
+  height: 15%;
+}
+
+.button-trial {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #5567ff;
+  text-align: center;
+  letter-spacing: -0.16px;
+  margin-right: 10px;
+  color: #ffffff;
+  background: #5567ff;
+  border-radius: 5px;
+  height: 42px;
+}
+
+.button-trial:hover {
+  background-color: #485aff !important;
+}
+
+.button-trial:focus {
+  transform: scale(0.97);
+}
+
+.button-video {
+  background: #02162d;
+  border: 2px solid #7a7a7a;
+  border-radius: 5px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  margin-left: 10px;
+  height: 42px;
+}
+
+.button-video:hover {
+  background: #5567ff !important;
+}
+
+.image-1 {
+  width: 90%;
+  height: 90%;
+  background-image: url("../../../../assets/img/ToolDemoPic.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 35px;
+}
+
+.video-trial-buttons {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

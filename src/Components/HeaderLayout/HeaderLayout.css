@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap");
+
+.container-fluid {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 99;
+}
+
+#companyName {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #e9e7e7;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  margin-left: 5px;
+}
+
+#companyName:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.header {
+  background-color: #02162d;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-links {
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #02162d;
+  color: #fff !important;
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+.nav-link a:hover {
+  color: #1890ff !important;
+  text-decoration: #8ca6fc underline !important;
+  text-underline-offset: 10px;
+}
+
+#usecases {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.logo-container {
+  color: #ffffff;
+  margin-right: 3%;
+}
+
+.button-container {
+  margin-left: 3%;
+}
+.button-register {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.16px;
+  background-color: #5567ff;
+  height: 42px;
+}
+
+.button-register:hover {
+  background-color: #485aff !important;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+.logo-container a {
+  margin-bottom: 0;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  background-image: url("../../assets/logo/Baby\ Blue\ Logo\ \(SVG\).svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.active {
+  color: #1890ff !important;
+  text-decoration: #8ca6fc underline !important;
+  text-underline-offset: 10px;
+  transition: 0.3s all ease;
+}

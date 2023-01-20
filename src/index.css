@@ -1,0 +1,72 @@
+body {
+  max-width: 100%;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e4f0fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(121, 178, 239);
+  border-radius: 7.5px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(82, 160, 244);
+}
+
+::-webkit-scrollbar-button {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: none;
+  background-color: #e4f0fb;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  transform: scale(1.5);
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background-image: url("./assets/scrollbar/up-arrow.png");
+}
+::-webkit-scrollbar-button:vertical:start:increment {
+  display: none;
+}
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background-image: url("./assets/scrollbar/down-arrow.png");
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #d9e7f3;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  background-image: url("./assets/scrollbar/arrow-left.png");
+}
+::-webkit-scrollbar-button:horizontal:start:increment {
+  display: none;
+}
+::-webkit-scrollbar-button:horizontal:end:decrement {
+  display: none;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  background-image: url("./assets/scrollbar/arrow-right.png");
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #d9e7f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
