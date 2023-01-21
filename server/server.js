@@ -5,8 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, "..", "build")));
 
-app.get("/", (req, res) => {
-  res.status(200).send("GET route is working");
+app.get("/homepage", (req, res) => {
+  res.sendFile("index.html", {
+    root: path.join(__dirname, "..", "build"),
+  });
+  // res.sendFile(path.join(__dirname, "../build", "index.html"));
 });
 
 app.post("/", (req, res) => {
