@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  res.status(200).send("GET route is working");
+  res.status(200).send("POST route is working");
 });
 
 app.listen(PORT, () => {
