@@ -20,9 +20,11 @@ const items = [
 ];
 
 function HeaderLayout() {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, user, isAuthenticated, isLoading, logout } =
+    useAuth0();
   const { active } = useContext(LandingPageContext);
   const [open, setOpen] = useState(false);
+  console.log(user);
   const showDrawer = () => {
     setOpen(true);
   };
@@ -81,17 +83,37 @@ function HeaderLayout() {
             Contact Us
           </a>
         </div>
-        <div className="button-container">
-          <Space wrap>
-            <Button
-              type="primary"
-              className="button-register"
-              onClick={() => loginWithRedirect()}
+        {isAuthenticated ? (
+          <div>
+            <h2 style={{ color: "#fff" }}>Welcome {user.given_name}</h2>
+            <button
+              onClick={() =>
+                logout({ logoutParams: { returnTo: window.location.origin } })
+              }
             >
-              Register / Log In
-            </Button>
-          </Space>
-        </div>
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div className="button-container">
+            <Space wrap>
+              <Button
+                type="primary"
+                className="button-register"
+                onClick={() =>
+                  loginWithRedirect({
+                    appState: {
+                      returnTo: window.location.pathname,
+                    },
+                  })
+                }
+              >
+                Register / Log In
+              </Button>
+            </Space>
+          </div>
+        )}
+
         <div className="drawer">
           <div className="logo" onClick={showDrawer} />
           <Drawer
