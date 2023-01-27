@@ -1,24 +1,26 @@
 import React, { useState, useContext } from "react";
 import LandingPageContext from "../../context/LandingPageContext";
 import { CaretDownOutlined } from "@ant-design/icons";
-import { Menu, Button, Space, Dropdown, Drawer } from "antd";
+import { Button, Space, Dropdown, Drawer } from "antd";
+import { useAuth0 } from "@auth0/auth0-react";
 import "./HeaderLayout.css";
 const items = [
   {
-    label: <a href="">1st menu item</a>, //Will use <Link /> - React Router DOM
+    label: <a href="#">1st menu item</a>, //Will use <Link /> - React Router DOM
     key: "0",
   },
   {
-    label: <a href="">2nd menu item</a>, //Will use <Link /> - React Router DOM
+    label: <a href="#">2nd menu item</a>, //Will use <Link /> - React Router DOM
     key: "1",
   },
   {
-    label: <a href="">3rd menu item</a>, //Will use <Link /> - React Router DOM
+    label: <a href="#">3rd menu item</a>, //Will use <Link /> - React Router DOM
     key: "2",
   },
 ];
 
 function HeaderLayout() {
+  const { loginWithRedirect } = useAuth0();
   const { active } = useContext(LandingPageContext);
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -40,13 +42,13 @@ function HeaderLayout() {
         <div className="nav-links">
           <a
             href="#chronologic"
-            className={active === "chronologic" && "active"}
+            className={active === "chronologic" ? "active" : undefined}
           >
             Home
           </a>
           <a
             href="#process-mining"
-            className={active === "process-mining" && "active"}
+            className={active === "process-mining" ? "active" : undefined}
           >
             What is Process Mining?
           </a>
@@ -65,20 +67,27 @@ function HeaderLayout() {
           </Dropdown>
           <a
             href="#testimonials"
-            className={active === "testimonials" && "active"}
+            className={active === "testimonials" ? "active" : undefined}
           >
             Testimonials
           </a>
-          <a href="#FAQ" className={active === "FAQ" && "active"}>
+          <a href="#FAQ" className={active === "FAQ" ? "active" : undefined}>
             FAQ
           </a>
-          <a href="#contact" className={active === "contact" && "active"}>
+          <a
+            href="#contact"
+            className={active === "contact" ? "active" : undefined}
+          >
             Contact Us
           </a>
         </div>
         <div className="button-container">
           <Space wrap>
-            <Button type="primary" className="button-register">
+            <Button
+              type="primary"
+              className="button-register"
+              onClick={() => loginWithRedirect()}
+            >
               Register / Log In
             </Button>
           </Space>
@@ -111,7 +120,7 @@ function HeaderLayout() {
                 }}
                 trigger={["click"]}
               >
-                <a onClick={(e) => e.preventDefault()}>
+                <a href="#" onClick={(e) => e.preventDefault()}>
                   <Space className="nav-link" id="usecases">
                     Industries and Use Cases
                     <CaretDownOutlined />
